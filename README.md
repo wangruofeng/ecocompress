@@ -561,7 +561,6 @@ ecocompress/
 **如果這個專案對您有幫助，請給個 ⭐ Star！**
 
 Made with ❤️ by EcoCompress Contributors
-
-> 💡 請將此處替換為您的名字或專案維護者資訊
+wangruofeng
 
 </div>
