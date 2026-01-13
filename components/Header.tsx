@@ -40,8 +40,22 @@ const Header: React.FC = () => {
           
           <div className="flex items-center gap-2 sm:gap-6">
             <div className="hidden md:flex items-center gap-4">
-              <a href="#" className="text-sm font-medium text-gray-500 hover:text-emerald-600 transition-colors">{t('documentation')}</a>
-              <a href="#" className="text-sm font-medium text-gray-500 hover:text-emerald-600 transition-colors">{t('github')}</a>
+              <a 
+                href="https://github.com/wangruofeng/ecocompress/blob/main/README.md" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-gray-500 hover:text-emerald-600 transition-colors"
+              >
+                {t('documentation')}
+              </a>
+              <a 
+                href="https://github.com/wangruofeng/ecocompress/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-gray-500 hover:text-emerald-600 transition-colors"
+              >
+                {t('github')}
+              </a>
             </div>
 
             {/* Language Switcher */}

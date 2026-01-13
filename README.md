@@ -54,11 +54,9 @@
 
 1. **克隆仓库**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/ecocompress.git
+   git clone https://github.com/wangruofeng/ecocompress.git
    cd ecocompress
    ```
-   
-   > 💡 请将 `YOUR_USERNAME` 替换为您的 GitHub 用户名
 
 2. **安装依赖**
    ```bash
@@ -188,10 +186,12 @@ ecocompress/
 
 如有问题或建议，请通过以下方式联系：
 
-- 📮 提交 [Issue](https://github.com/YOUR_USERNAME/ecocompress/issues)
-- 💬 开启 [Discussion](https://github.com/YOUR_USERNAME/ecocompress/discussions)
+- 📮 提交 [Issue](https://github.com/wangruofeng/ecocompress/issues)
+- 💬 开启 [Discussion](https://github.com/wangruofeng/ecocompress/discussions)
 
-> 💡 请将 `YOUR_USERNAME` 替换为您的 GitHub 用户名
+### 📋 Changelog
+
+详细的更新日志请查看 [CHANGELOG.md](CHANGELOG.md)。
 
 ---
 
@@ -234,12 +234,10 @@ The preview interface supports comparing original and compressed images by dragg
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/ecocompress.git
+   git clone https://github.com/wangruofeng/ecocompress.git
    cd ecocompress
    ```
    
-   > 💡 Replace `YOUR_USERNAME` with your GitHub username
-
 2. **Install dependencies**
    ```bash
    npm install
@@ -368,10 +366,12 @@ This project is licensed under the [MIT License](LICENSE).
 
 If you have questions or suggestions, please contact us through:
 
-- 📮 Submit an [Issue](https://github.com/YOUR_USERNAME/ecocompress/issues)
-- 💬 Start a [Discussion](https://github.com/YOUR_USERNAME/ecocompress/discussions)
+- 📮 Submit an [Issue](https://github.com/wangruofeng/ecocompress/issues)
+- 💬 Start a [Discussion](https://github.com/wangruofeng/ecocompress/discussions)
 
-> 💡 Replace `YOUR_USERNAME` with your GitHub username
+### 📋 Changelog
+
+For detailed changelog, please see [CHANGELOG.md](CHANGELOG.md).
 
 ---
 
@@ -414,11 +414,10 @@ If you have questions or suggestions, please contact us through:
 
 1. **克隆倉庫**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/ecocompress.git
+   git clone https://github.com/wangruofeng/ecocompress.git
    cd ecocompress
    ```
-   
-   > 💡 請將 `YOUR_USERNAME` 替換為您的 GitHub 使用者名稱
+
 
 2. **安裝依賴**
    ```bash
@@ -548,10 +547,12 @@ ecocompress/
 
 如有問題或建議，請透過以下方式聯絡：
 
-- 📮 提交 [Issue](https://github.com/YOUR_USERNAME/ecocompress/issues)
-- 💬 開啟 [Discussion](https://github.com/YOUR_USERNAME/ecocompress/discussions)
+- 📮 提交 [Issue](https://github.com/wangruofeng/ecocompress/issues)
+- 💬 開啟 [Discussion](https://github.com/wangruofeng/ecocompress/discussions)
 
-> 💡 請將 `YOUR_USERNAME` 替換為您的 GitHub 使用者名稱
+### 📋 更新日誌
+
+詳細的更新日誌請查看 [CHANGELOG.md](CHANGELOG.md)。
 
 ---
 

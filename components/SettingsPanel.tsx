@@ -11,6 +11,7 @@ interface SettingsPanelProps {
 
 const SettingsPanel: React.FC<SettingsPanelProps> = ({ settings, onSettingsChange, disabled }) => {
   const { t } = useLanguage();
+  const [isDragging, setIsDragging] = React.useState(false);
   
   const handleQualityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     onSettingsChange({
@@ -18,6 +19,25 @@ const SettingsPanel: React.FC<SettingsPanelProps> = ({ settings, onSettingsChang
       quality: parseFloat(e.target.value)
     });
   };
+
+  const handleMouseDown = () => {
+    if (!disabled) setIsDragging(true);
+  };
+
+  React.useEffect(() => {
+    const handleEnd = () => {
+      setIsDragging(false);
+    };
+
+    if (isDragging) {
+      window.addEventListener('mouseup', handleEnd);
+      window.addEventListener('touchend', handleEnd);
+      return () => {
+        window.removeEventListener('mouseup', handleEnd);
+        window.removeEventListener('touchend', handleEnd);
+      };
+    }
+  }, [isDragging, disabled]);
 
   const getQualityLabel = (q: number) => {
     if (q >= 0.8) return t('qualityHigh');
@@ -44,16 +64,62 @@ const SettingsPanel: React.FC<SettingsPanelProps> = ({ settings, onSettingsChang
               {Math.round(settings.quality * 100)}% ({getQualityLabel(settings.quality)})
             </span>
           </div>
-          <input
-            type="range"
-            min="0.1"
-            max="1.0"
-            step="0.05"
-            value={settings.quality}
-            onChange={handleQualityChange}
-            disabled={disabled}
-            className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-emerald-600 disabled:opacity-50"
-          />
+          
+          {/* Custom Progress Bar Slider */}
+          <div className="relative group">
+            {/* Progress Bar Background */}
+            <div className="w-full h-3 bg-gray-200 rounded-full overflow-hidden shadow-inner">
+              {/* Highlighted Selected Portion */}
+              <div 
+                className="h-full rounded-full transition-all duration-200 ease-out"
+                style={{
+                  width: `${((settings.quality - 0.1) / (1.0 - 0.1)) * 100}%`,
+                  background: settings.quality >= 0.8 
+                    ? 'linear-gradient(90deg, #10b981 0%, #34d399 100%)'
+                    : settings.quality >= 0.5
+                    ? 'linear-gradient(90deg, #f59e0b 0%, #fbbf24 100%)'
+                    : 'linear-gradient(90deg, #ef4444 0%, #f87171 100%)',
+                  boxShadow: isDragging ? '0 0 8px rgba(0,0,0,0.2)' : 'none'
+                }}
+              />
+            </div>
+            
+            {/* Slider Input (invisible but functional) */}
+            <input
+              type="range"
+              min="0.1"
+              max="1.0"
+              step="0.05"
+              value={settings.quality}
+              onChange={handleQualityChange}
+              onMouseDown={handleMouseDown}
+              onTouchStart={handleMouseDown}
+              disabled={disabled}
+              className="absolute top-0 left-0 w-full h-3 opacity-0 cursor-pointer disabled:cursor-not-allowed z-10"
+              style={{
+                background: 'transparent',
+                WebkitAppearance: 'none',
+                appearance: 'none'
+              }}
+            />
+            
+            {/* Slider Thumb Indicator */}
+            <div
+              className={`absolute top-1/2 transform -translate-y-1/2 bg-white border-2 rounded-full shadow-lg transition-all duration-200 ease-out pointer-events-none ${
+                isDragging ? 'w-6 h-6 scale-110' : 'w-5 h-5 group-hover:w-6 group-hover:h-6'
+              }`}
+              style={{
+                left: `calc(${((settings.quality - 0.1) / (1.0 - 0.1)) * 100}% - ${isDragging ? '12px' : '10px'})`,
+                borderColor: settings.quality >= 0.8 
+                  ? '#10b981'
+                  : settings.quality >= 0.5
+                  ? '#f59e0b'
+                  : '#ef4444',
+                borderWidth: isDragging ? '3px' : '2px'
+              }}
+            />
+          </div>
+          
           <div className="flex justify-between text-xs text-gray-400 px-1">
             <span>{t('lowSize')}</span>
             <span>{t('bestQuality')}</span>
