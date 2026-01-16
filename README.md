@@ -9,6 +9,8 @@
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
+**🌐 [在线演示](https://wangruofeng.github.io/ecocompress/) | [GitHub 仓库](https://github.com/wangruofeng/ecocompress)**
+
 **Language / 语言 / 語言**: [English](#english) | [简体中文](#简体中文) | [繁體中文](#繁體中文)
 
 </div>
@@ -21,12 +23,14 @@
 
 - 🔒 **完全客户端处理** - 所有图片处理都在浏览器中完成，不会上传到任何服务器，保护您的隐私
 - 🎨 **实时预览对比** - 支持拖拽分割线对比原图和压缩后的图片效果
+- 🎯 **图片质量进度条** - 带高亮选中部分的进度条，根据质量值显示不同颜色（绿色/黄色/红色）
 - 🚀 **批量处理** - 支持同时压缩多张图片，提高工作效率
-- 🎯 **灵活配置** - 可自定义图片质量、输出格式和最大宽度
-- 🌍 **多语言支持** - 支持英文、简体中文和繁体中文
+- 🎛️ **灵活配置** - 可自定义图片质量、输出格式和最大宽度
+- 🌍 **多语言支持** - 支持英文、简体中文和繁体中文，默认简体中文
 - 💾 **格式转换** - 支持 JPG、PNG、WebP 格式之间的转换
 - 📱 **响应式设计** - 完美适配桌面端和移动端设备
 - ⚡ **高性能** - 基于 Canvas API，压缩速度快，资源占用低
+- 🌐 **在线访问** - 已部署到 GitHub Pages，可直接在线使用
 
 ### 🎬 功能演示
 
@@ -201,12 +205,14 @@ ecocompress/
 
 - 🔒 **Fully Client-Side Processing** - All image processing happens in your browser, no uploads to any server, protecting your privacy
 - 🎨 **Real-time Preview Comparison** - Drag a split line to compare original and compressed images
+- 🎯 **Image Quality Progress Bar** - Progress bar with highlighted selected portion, displaying different colors based on quality value (green/yellow/red)
 - 🚀 **Batch Processing** - Compress multiple images simultaneously
-- 🎯 **Flexible Configuration** - Customize image quality, output format, and max width
-- 🌍 **Multi-language Support** - English, Simplified Chinese, and Traditional Chinese
+- 🎛️ **Flexible Configuration** - Customize image quality, output format, and max width
+- 🌍 **Multi-language Support** - English, Simplified Chinese, and Traditional Chinese, defaulting to Simplified Chinese
 - 💾 **Format Conversion** - Convert between JPG, PNG, and WebP formats
 - 📱 **Responsive Design** - Perfect for desktop and mobile devices
 - ⚡ **High Performance** - Based on Canvas API, fast compression with low resource usage
+- 🌐 **Online Access** - Deployed to GitHub Pages, accessible online
 
 ### 🎬 Demo
 
@@ -381,12 +387,14 @@ For detailed changelog, please see [CHANGELOG.md](CHANGELOG.md).
 
 - 🔒 **完全客戶端處理** - 所有圖片處理都在瀏覽器中完成，不會上傳到任何伺服器，保護您的隱私
 - 🎨 **即時預覽對比** - 支援拖曳分割線對比原圖和壓縮後的圖片效果
+- 🎯 **圖片品質進度條** - 帶高亮選中部分的進度條，根據品質值顯示不同顏色（綠色/黃色/紅色）
 - 🚀 **批次處理** - 支援同時壓縮多張圖片，提高工作效率
-- 🎯 **靈活配置** - 可自訂圖片品質、輸出格式和最大寬度
-- 🌍 **多語言支援** - 支援英文、簡體中文和繁體中文
+- 🎛️ **靈活配置** - 可自訂圖片品質、輸出格式和最大寬度
+- 🌍 **多語言支援** - 支援英文、簡體中文和繁體中文，預設簡體中文
 - 💾 **格式轉換** - 支援 JPG、PNG、WebP 格式之間的轉換
 - 📱 **響應式設計** - 完美適配桌面端和行動裝置
 - ⚡ **高效能** - 基於 Canvas API，壓縮速度快，資源佔用低
+- 🌐 **線上訪問** - 已部署到 GitHub Pages，可直接線上使用
 
 ### 🎬 功能演示
 

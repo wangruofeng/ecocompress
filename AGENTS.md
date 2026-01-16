@@ -20,9 +20,23 @@ npm run build
 
 # Preview production build
 npm run preview
+
+# Preview GitHub Pages build locally
+npm run preview:gh-pages
 ```
 
 **No linting or testing commands exist.** Run `npm run build` to verify changes compile correctly.
+
+## GitHub Pages Deployment
+
+The project is configured for automatic deployment to GitHub Pages:
+
+- **Base Path**: `/ecocompress/` (configured in `vite.config.ts`)
+- **Workflow**: `.github/workflows/deploy.yml`
+- **Auto-deploy**: Pushes to `main` branch trigger automatic deployment
+- **Online Demo**: https://wangruofeng.github.io/ecocompress/
+
+See [DEPLOY.md](DEPLOY.md) for detailed deployment instructions.
 
 ## Code Style Guidelines
 

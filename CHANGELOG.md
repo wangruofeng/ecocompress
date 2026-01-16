@@ -31,6 +31,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 基于 React 19.2.3 和 TypeScript 5.8.2 构建
 - 使用 Vite 6.2.0 作为构建工具
 - 采用 Tailwind CSS 进行样式设计
+- 配置 GitHub Pages 自动部署
+- 添加 GitHub Actions 工作流实现 CI/CD
 
 ---
 
@@ -54,6 +56,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Built with React 19.2.3 and TypeScript 5.8.2
 - Using Vite 6.2.0 as build tool
 - Styled with Tailwind CSS
+- Configured GitHub Pages automatic deployment
+- Added GitHub Actions workflow for CI/CD
 
 ---
 
@@ -77,3 +81,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 基於 React 19.2.3 和 TypeScript 5.8.2 構建
 - 使用 Vite 6.2.0 作為構建工具
 - 採用 Tailwind CSS 進行樣式設計
+- 配置 GitHub Pages 自動部署
+- 新增 GitHub Actions 工作流程實現 CI/CD
