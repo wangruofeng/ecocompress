@@ -1,10 +1,10 @@
 # AGENTS.md
 
-**For Agentic Coding Agents Working on EcoCompress**
+**For Agentic Coding Agents Working on ImgCompress**
 
 ## Project Overview
 
-EcoCompress is a client-side image compression tool built with React 19, TypeScript 5.8, and Vite 6. All image processing happens in the browser—no server uploads. The project uses Tailwind CSS for styling and Lucide React for icons.
+ImgCompress is a client-side image compression tool built with React 19, TypeScript 5.8, and Vite 6. All image processing happens in the browser—no server uploads. The project uses Tailwind CSS for styling and Lucide React for icons.
 
 ## Build Commands
 
@@ -31,10 +31,10 @@ npm run preview:gh-pages
 
 The project is configured for automatic deployment to GitHub Pages:
 
-- **Base Path**: `/ecocompress/` (configured in `vite.config.ts`)
+- **Base Path**: `/img_compress/` (configured in `vite.config.ts`)
 - **Workflow**: `.github/workflows/deploy.yml`
 - **Auto-deploy**: Pushes to `main` branch trigger automatic deployment
-- **Online Demo**: https://wangruofeng.github.io/ecocompress/
+- **Online Demo**: https://wangruofeng.github.io/img_compress/
 
 See [DEPLOY.md](DEPLOY.md) for detailed deployment instructions.
 
@@ -139,7 +139,7 @@ try {
 ### Project Structure
 
 ```
-ecocompress/
+img_compress/
 ├── components/          # React components
 ├── contexts/           # React Context providers
 ├── locales/           # i18n translations

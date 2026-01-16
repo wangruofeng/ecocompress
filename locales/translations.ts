@@ -1,6 +1,6 @@
 export const translations = {
   en: {
-    appTitle: "EcoCompress",
+    appTitle: "ImgCompress",
     appSubtitle: "Secure Client-Side Compression",
     documentation: "Documentation",
     github: "GitHub",
@@ -30,7 +30,7 @@ export const translations = {
     previewLabel: "Preview"
   },
   zh: {
-    appTitle: "EcoCompress",
+    appTitle: "ImgCompress",
     appSubtitle: "安全且纯净的客户端压缩",
     documentation: "文档",
     github: "GitHub",
@@ -59,8 +59,8 @@ export const translations = {
     downloadBtn: "下载",
     previewLabel: "预览"
   },
-  'zh-tw': {
-    appTitle: "EcoCompress",
+  'zh-hk': {
+    appTitle: "ImgCompress",
     appSubtitle: "安全且純淨的用戶端壓縮",
     documentation: "文件",
     github: "GitHub",

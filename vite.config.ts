@@ -4,8 +4,8 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig(({ mode, command }) => {
     const env = loadEnv(mode, '.', '');
-    // 构建时使用 /ecocompress/ 作为 base，开发时使用 /
-    const base = command === 'build' ? '/ecocompress/' : '/';
+    // 构建时使用 /img_compress/ 作为 base，开发时使用 /
+    const base = command === 'build' ? '/img_compress/' : '/';
     return {
       base,
       server: {

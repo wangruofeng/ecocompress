@@ -1,5 +1,5 @@
 {
-  "name": "EcoCompress",
+  "name": "ImgCompress",
   "description": "A modern, privacy-first image compression tool. Compress JPG, PNG, and WebP images locally in your browser with adjustable quality settings.",
   "requestFramePermissions": []
 }

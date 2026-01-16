@@ -12,14 +12,11 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [language, setLanguageState] = useState<Language>(() => {
     const saved = localStorage.getItem('app-language');
-    if (saved && (saved === 'en' || saved === 'zh' || saved === 'zh-tw')) {
+    if (saved && (saved === 'en' || saved === 'zh' || saved === 'zh-hk')) {
       return saved as Language;
     }
-    // Auto-detect browser language
-    const browserLang = navigator.language.toLowerCase();
-    if (browserLang.includes('tw') || browserLang.includes('hk')) return 'zh-tw';
-    if (browserLang.includes('zh')) return 'zh';
-    return 'en';
+    // Default to Simplified Chinese
+    return 'zh';
   });
 
   const setLanguage = (lang: Language) => {

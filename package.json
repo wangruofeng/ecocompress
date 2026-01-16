@@ -1,5 +1,5 @@
 {
-  "name": "ecocompress",
+  "name": "img_compress",
   "private": true,
   "version": "0.1.0",
   "type": "module",
@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "preview:gh-pages": "vite preview --base /ecocompress/"
+    "preview:gh-pages": "vite preview --base /img_compress/"
   },
   "dependencies": {
     "lucide-react": "^0.562.0",

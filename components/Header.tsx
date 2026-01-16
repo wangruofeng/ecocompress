@@ -18,10 +18,10 @@ const Header: React.FC = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const languages: { code: Language; label: string }[] = [
-    { code: 'en', label: 'English' },
-    { code: 'zh', label: '简体中文' },
-    { code: 'zh-tw', label: '繁體中文' },
+  const languages: { code: Language; label: string; flag: string }[] = [
+    { code: 'en', label: 'English', flag: '🇺🇸' },
+    { code: 'zh', label: '简体中文', flag: '🇨🇳' },
+    { code: 'zh-hk', label: '繁體中文', flag: '🇭🇰' },
   ];
 
   return (
@@ -41,7 +41,7 @@ const Header: React.FC = () => {
           <div className="flex items-center gap-2 sm:gap-6">
             <div className="hidden md:flex items-center gap-4">
               <a 
-                href="https://github.com/wangruofeng/ecocompress/blob/main/README.md" 
+                href="https://github.com/wangruofeng/img_compress/blob/main/README.md" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-sm font-medium text-gray-500 hover:text-emerald-600 transition-colors"
@@ -49,7 +49,7 @@ const Header: React.FC = () => {
                 {t('documentation')}
               </a>
               <a 
-                href="https://github.com/wangruofeng/ecocompress/" 
+                href="https://github.com/wangruofeng/img_compress/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-sm font-medium text-gray-500 hover:text-emerald-600 transition-colors"
@@ -79,13 +79,14 @@ const Header: React.FC = () => {
                         setLanguage(lang.code);
                         setIsDropdownOpen(false);
                       }}
-                      className={`w-full text-left px-4 py-2 text-sm transition-colors ${
+                      className={`w-full text-left px-4 py-2 text-sm transition-colors flex items-center gap-2 ${
                         language === lang.code 
                           ? 'bg-emerald-50 text-emerald-700 font-medium' 
                           : 'text-gray-600 hover:bg-gray-50'
                       }`}
                     >
-                      {lang.label}
+                      <span>{lang.flag}</span>
+                      <span>{lang.label}</span>
                     </button>
                   ))}
                 </div>
