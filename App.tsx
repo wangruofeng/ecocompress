@@ -10,16 +10,44 @@ import PreviewModal from './components/PreviewModal';
 import { DownloadIcon, LoadingIcon, DeleteIcon } from './components/Icon';
 import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
 
+const STORAGE_KEY = 'img_compress_settings';
+const DEFAULT_SETTINGS: CompressionSettings = {
+  quality: 0.95,
+  format: 'image/webp',
+  maxWidth: 1920
+};
+
+const loadSettings = (): CompressionSettings => {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {
+      return { ...DEFAULT_SETTINGS, ...JSON.parse(saved) };
+    }
+  } catch (e) {
+    console.warn('Failed to load settings from localStorage:', e);
+  }
+  return DEFAULT_SETTINGS;
+};
+
+const saveSettings = (settings: CompressionSettings) => {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(settings));
+  } catch (e) {
+    console.warn('Failed to save settings to localStorage:', e);
+  }
+};
+
 function AppContent() {
   const { t } = useLanguage();
   const [images, setImages] = useState<ProcessedImage[]>([]);
   const [previewImage, setPreviewImage] = useState<ProcessedImage | null>(null);
-  const [settings, setSettings] = useState<CompressionSettings>({
-    quality: 0.9,
-    format: 'image/jpeg',
-    maxWidth: 1920
-  });
+  const [settings, setSettings] = useState<CompressionSettings>(loadSettings);
   const [isProcessingGlobal, setIsProcessingGlobal] = useState(false);
+
+  const handleSettingsChange = (newSettings: CompressionSettings) => {
+    setSettings(newSettings);
+    saveSettings(newSettings);
+  };
 
   // Debounced processing trigger when settings change
   useEffect(() => {
@@ -160,9 +188,9 @@ function AppContent() {
         {images.length > 0 && (
           <div className="animate-fade-in space-y-8">
             <div className="max-w-4xl mx-auto">
-                <SettingsPanel 
-                    settings={settings} 
-                    onSettingsChange={setSettings} 
+                <SettingsPanel
+                    settings={settings}
+                    onSettingsChange={handleSettingsChange}
                     disabled={isProcessingGlobal}
                 />
             </div>
